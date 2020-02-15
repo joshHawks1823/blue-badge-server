@@ -15,6 +15,6 @@ app.use("/api/user", user);
 //Protected Routes
 app.use(require("./middleware/validate-session"));
 app.use("/inventory", inventory);
-app.listen(4000, function() {
-  console.log("App is listening on 4000.");
+app.listen(process.env.PORT, function() {
+  console.log(`app is listening on ${process.env.PORT} and hello world`);
 });
